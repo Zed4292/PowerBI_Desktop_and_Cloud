@@ -112,3 +112,16 @@ Spalte auswählen -> Split Column -> "By Delimiter" auswählen
 
 ![alt text](image-24.png)
 
+### Abfragen Gruppieren
+
+- Rechtsklick in den Bereich "Querries" und Gruppennamen vergeben
+
+![alt text](image-26.png)
+
+
+### Daten manuell eingeben
+
+- Sollte es nötig sein Daten manuell einzugeben, kann dies über einen manuellen Datenimport abgebildet werden
+- Dazu können Tabellen manuell erstellt werden
+
+![alt text](image-27.png)
