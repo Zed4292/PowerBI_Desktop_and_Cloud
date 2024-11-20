@@ -1,6 +1,6 @@
 # Python in PowerBI
 
-# Daten Transformieren mit Python
+## Daten Transformieren mit Python
 
 - es muss lokal auf dem Rechner Python installiert sein inkl. aller nötigen Packages
 - anschließend Daten laden und ein Python script ausführen
@@ -8,21 +8,17 @@
 
 ![alt text](image.png)
 
-
-# Daten Visualisieren mit Python
+## Daten Visualisieren mit Python
 
 - es können alle beliebingen libs wie z.B. matplotlib oder plotly zur visualisierung verwendet werden
 
 ![alt text](image-1.png)
 
-
-
-
-
 Violin plot:
 
-# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: 
- 
+## The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script:
+
+```python
 # dataset = pandas.DataFrame(prep_time, cook_time)
 # dataset = dataset.drop_duplicates()
  
@@ -49,20 +45,11 @@ sns.pairplot(dataset)
  
 plt.show()
 
-
-
-
-
-
-
-
-
-
-
-
+```
 
 Overlapping ridge plots:
 
+```python
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -93,11 +80,13 @@ def label(x, color, label):
     ax = plt.gca()
     ax.text(0, .2, label, fontweight="bold", color=color,
             ha="left", va="center", transform=ax.transAxes)
- 
- 
+
 g.map(label, "x")
- 
+
+
 # Set the subplots to overlap
+
+
 g.fig.subplots_adjust(hspace=-.25)
  
 # Remove axes details that don't play well with overlap
@@ -107,7 +96,11 @@ g.despine(bottom=True, left=True)
  
 plt.show()
 
+```
 
+- Sentiment analyse für Texte
+
+```python
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
 def get_sentiment(text):
@@ -118,3 +111,4 @@ def get_sentiment(text):
         return 0
 dataset['Review Text'].astype(str)
 dataset['Sentiment']=dataset['Review Text'].apply(get_sentiment)
+```
