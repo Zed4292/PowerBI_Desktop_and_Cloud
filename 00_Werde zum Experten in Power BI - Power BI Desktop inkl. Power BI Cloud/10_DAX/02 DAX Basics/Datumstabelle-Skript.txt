@@ -1,0 +1,12 @@
+Datum = 
+ADDCOLUMNS ( 
+CALENDAR(MINX('Verkäufe';'Verkäufe'[Datum]);MAXX('Verkäufe';'Verkäufe'[Datum]));
+"DateAsInteger"; FORMAT ( [Date]; "YYYYMMDD" );
+ "Jahr"; YEAR ( [Date] ); "MonthNo"; FORMAT ( [Date]; "MM" ); 
+"JahrMonatNum"; FORMAT ( [Date]; "YYYY/MM" ); 
+"JahrMonat"; FORMAT ( [Date]; "YYYY/mmm" ); 
+"MonatKurz"; FORMAT ( [Date]; "mmm" );
+"MonatLang"; FORMAT ( [Date]; "mmmm" ); "WeekNo"; WEEKDAY ( 
+[Date] ); 
+"Wochentag"; FORMAT ( [Date]; "dddd" ); "WeekDayShort"; FORMAT ( [Date]; "dddd" ); "Quartal"; "Q" & FORMAT ( [Date]; "Q" ); "YearQuarter"; FORMAT ( [Date]; "YYYY" ) & "/Q" & FORMAT ( [Date]; "Q" ))
+
